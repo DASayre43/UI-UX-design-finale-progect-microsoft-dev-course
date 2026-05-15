@@ -1,0 +1,906 @@
+/* ==========================================
+   ALEX'S STYLES - PHOTOGRAPHY PORTFOLIO
+   BLACK & WHITE MINIMAL LUXURY THEME
+========================================== */
+
+:root {
+
+  /* COLORS */
+
+  --bg-color: #0d0d0d;
+  --bg-secondary: #151515;
+  --card-color: #1f1f1f;
+
+  --primary: #f5f5f5;
+  --accent: #b3b3b3;
+
+  --text-main: #ffffff;
+  --text-muted: #c7c7c7;
+
+  --border-color: rgba(255,255,255,0.08);
+
+  --shadow:
+    0 10px 30px rgba(0,0,0,0.45);
+
+  --hover-shadow:
+    0 18px 45px rgba(255,255,255,0.06);
+}
+
+/* ==========================================
+   GLOBAL STYLES
+========================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family: 'Poppins', sans-serif;
+
+  background: var(--bg-color);
+
+  color: var(--text-main);
+
+  line-height: 1.7;
+
+  overflow-x: hidden;
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.navbar {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.2rem 8%;
+
+  background:
+    rgba(10, 10, 10, 0.85);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom:
+    1px solid var(--border-color);
+
+  z-index: 1000;
+}
+
+.logo-holder{
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: var(--primary);
+}
+
+.logo-photo{
+  background-image: url("photos/Alex\'s\ styles.png");
+  background-size: cover;
+  height: 80%;
+  width: 7%;
+}
+
+.nav-links {
+
+  display: flex;
+  list-style: none;
+
+  gap: 2rem;
+}
+
+.nav-links a {
+
+  position: relative;
+
+  color: var(--text-muted);
+
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  transition:
+    color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Elegant underline animation */
+
+.nav-links a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 0%;
+  height: 1px;
+
+  background: white;
+
+  transition: width 0.35s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ==========================================
+   TOOLTIPS
+========================================== */
+
+.nav-links a::before {
+
+  content: attr(data-tooltip);
+
+  position: absolute;
+
+  bottom: -42px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: #ffffff;
+  color: #000000;
+
+  padding: 0.45rem 0.8rem;
+
+  border-radius: 8px;
+
+  font-size: 0.72rem;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity 0.25s ease;
+
+  white-space: nowrap;
+}
+
+.nav-links a:hover::before {
+  opacity: 1;
+}
+
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero {
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2rem 8%;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* Large subtle grayscale background */
+
+.hero::before {
+
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.75)
+    ),
+    url("images/hero-photo.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  filter: grayscale(100%);
+
+  z-index: -2;
+}
+
+/* Soft vignette */
+
+.hero::after {
+
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle,
+      transparent 40%,
+      rgba(0,0,0,0.7) 100%
+    );
+
+  z-index: -1;
+}
+
+.hero-content {
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero h1 {
+
+  font-size: clamp(3.5rem, 8vw, 6rem);
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 1rem;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero p {
+
+  color: var(--text-muted);
+
+  font-size: 1.2rem;
+
+  max-width: 700px;
+
+  margin: auto auto 2.5rem;
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.btn {
+
+  display: inline-block;
+
+  padding: 1rem 2rem;
+
+  border:
+    1px solid rgba(255,255,255,0.15);
+
+  border-radius: 999px;
+
+  background: transparent;
+
+  color: white;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn:hover {
+
+  background: white;
+  color: black;
+
+  transform: translateY(-3px);
+
+  box-shadow: var(--hover-shadow);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* ==========================================
+   SECTIONS
+========================================== */
+
+.section {
+  padding: 7rem 8%;
+}
+
+.alt-section {
+  background: var(--bg-secondary);
+}
+
+.section-title {
+
+  text-align: center;
+
+  margin-bottom: 4rem;
+}
+
+.section-title h2 {
+
+  font-size: 2.7rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 3px;
+
+  position: relative;
+
+  display: inline-block;
+}
+
+.section-title h2::after {
+
+  content: "";
+
+  display: block;
+
+  width: 60%;
+  height: 2px;
+
+  margin: 1rem auto 0;
+
+  background: rgba(255,255,255,0.3);
+}
+
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+/* #about{
+  display: grid;
+  grid-template-areas: "side header" "side main";
+  width: 100%;
+}
+
+.about-content {
+
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+
+  max-width: 850px;
+
+  background: var(--card-color);
+
+  padding: 3rem;
+
+  border-radius: 24px;
+
+  border:
+    1px solid var(--border-color);
+
+  box-shadow: var(--shadow);
+
+  text-align: center;
+}
+
+.about-card p {
+
+  color: var(--text-muted);
+
+  margin-bottom: 1.5rem;
+
+  font-size: 1.05rem;
+} */
+
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+.about {
+
+  padding: 6rem 8%;
+  background: #111;
+}
+
+.about-container {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 4rem;
+
+  align-items: center;
+}
+
+.about-image img {
+
+  /* width: 100%; */
+
+  height: 650px;
+
+  object-fit:fill;
+
+  border-radius: 24px;
+
+  filter: grayscale(100%);
+
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+.about-image img:hover {
+
+  transform: scale(1.02);
+
+  filter: grayscale(20%);
+}
+
+.about-content h2 {
+
+  font-size: 2.8rem;
+
+  margin-bottom: 1.5rem;
+
+  color: #fff;
+}
+
+.about-content p {
+
+  color: #cfcfcf;
+
+  line-height: 1.9;
+
+  margin-bottom: 1.5rem;
+
+  font-size: 1.05rem;
+}
+
+/* ==========================================
+   PORTFOLIO SECTION
+========================================== */
+
+.portfolio-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 2rem;
+}
+
+/* Large photo-first cards */
+
+.project-card {
+
+  background: var(--card-color);
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  border:
+    1px solid var(--border-color);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+
+  transform: translateY(-10px);
+
+  box-shadow: var(--hover-shadow);
+}
+
+/* Black & white photo presentation */
+
+.project-image {
+
+  height: 420px;
+
+  background-size: cover;
+  background-position: center;
+
+  filter: grayscale(100%);
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+/* Remove grayscale slightly on hover */
+
+.project-card:hover .project-image {
+
+  transform: scale(1.04);
+
+  filter: grayscale(30%);
+}
+
+/* Example image assignments */
+
+.project-card:nth-child(1) .project-image {
+  background-image: url("/photos/DASayre43_3106828.png");
+}
+
+.project-card:nth-child(2) .project-image {
+  background-image: url("photos/blocky\ wedding\ photo.webp");
+  background-position: top;
+}
+
+.project-card:nth-child(3) .project-image {
+  background-image: url("photos/DASayre43_105457.png");
+}
+
+.project-card-content {
+  padding: 1.8rem;
+}
+
+.project-card h3 {
+
+  font-size: 1.3rem;
+
+  margin-bottom: 0.8rem;
+
+  letter-spacing: 1px;
+}
+
+.project-card p {
+
+  color: var(--text-muted);
+
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================
+   HERO BACKGROUND PHOTO
+========================================== */
+
+.hero::before {
+
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.75)
+    ),
+    url("/photos/DASayre43_3098925.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+
+  z-index: -1;
+}
+
+/* ==========================================
+   CONTACT SECTION
+========================================== */
+
+.contact-card {
+
+  max-width: 700px;
+
+  margin: auto;
+
+  background: var(--card-color);
+
+  border:
+    1px solid var(--border-color);
+
+  border-radius: 24px;
+
+  padding: 4rem 2rem;
+
+  text-align: center;
+
+  box-shadow: var(--shadow);
+}
+
+.contact-card p {
+
+  color: var(--text-muted);
+
+  margin-bottom: 2rem;
+
+  font-size: 1.1rem;
+}
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.modal {
+
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    rgba(0,0,0,0.8);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+
+  z-index: 3000;
+}
+
+.modal.show {
+
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+
+  width: 90%;
+  max-width: 700px;
+
+  background: #121212;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius: 24px;
+
+  padding: 3rem;
+
+  position: relative;
+
+  animation: fadeUp 0.4s ease;
+}
+
+.modal-content h2 {
+
+  margin-bottom: 1rem;
+
+  font-size: 2rem;
+}
+
+.modal-content p {
+  color: var(--text-muted);
+}
+
+.close-modal {
+
+  position: absolute;
+
+  top: 15px;
+  right: 20px;
+
+  background: none;
+  border: none;
+
+  color: white;
+
+  font-size: 2rem;
+
+  cursor: pointer;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+  text-align: center;
+
+  padding: 2rem;
+
+  color: var(--text-muted);
+
+  border-top:
+    1px solid var(--border-color);
+}
+
+/* ==========================================
+   MODAL GALLERY
+========================================== */
+
+.modal-gallery {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+
+  gap: 1rem;
+
+  margin:
+    2rem 0;
+}
+
+.modal-gallery img {
+
+  width: 100%;
+  height: 220px;
+
+  object-fit: cover;
+
+  border-radius: 16px;
+
+  filter: grayscale(100%);
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease,
+    opacity 0.35s ease;
+
+  cursor: pointer;
+}
+
+/* Subtle hover effect */
+
+.modal-gallery img:hover {
+
+  transform: scale(1.03);
+
+  filter: grayscale(20%);
+
+  opacity: 0.95;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+  .navbar {
+
+    flex-direction: column;
+
+    gap: 1rem;
+
+    padding: 1rem 5%;
+  }
+
+  .nav-links {
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 5rem 5%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-image {
+    height: 320px;
+  }
+
+  /* #about-image{
+    visibility: hidden; */
+    /* scale: 0% 0%;
+    grid-area: unset;
+  }
+
+  #about{
+    grid-template-areas: "header" "main";
+  } */
+
+  .logo-photo{
+    visibility: hidden;
+  }
+
+  .about-card,
+  .contact-card,
+  .modal-content {
+    padding: 2rem;
+  }
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media screen and (min-width: 769px)
+and (max-width: 1024px) {
+
+  .portfolio-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .project-image {
+    height: 360px;
+  }
+}
+
+/* ==========================================
+   DESKTOP
+========================================== */
+
+@media screen and (min-width: 1025px) {
+
+  .portfolio-grid {
+
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+}

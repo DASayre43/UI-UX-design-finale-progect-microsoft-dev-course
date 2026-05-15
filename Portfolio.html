@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Alex's styles</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <header class="navbar">
+
+    
+    <img src="photos/Alex's styles.png" class="logo-photo"></img>
+    <!-- <div class="logo">Alex's styles</div> -->
+   
+    
+    
+    <nav>
+      <ul class="nav-links">
+
+        <li>
+          <a href="#about" data-tooltip="Learn more about me">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#portfolio" data-tooltip="View my projects">
+            Portfolio
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact" data-tooltip="Get in touch">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>Hello, I'm <span>alex</span></h1>
+
+      <p>
+       nature photographer
+      </p>
+
+      <a href="#portfolio" class="btn pulse-btn">
+        View My Work
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <!-- <section id="about" class="section">
+
+    <div class="section-title" style="grid-area: header;">
+      <h2>About Me</h2>
+    </div>
+
+    <img src="photos/alex.png" id="about-image" style="grid-area: side; filter: grayscale(80%);">
+
+    <div class="about-content" style="grid-area: main;">
+
+      <div class="about-card">
+
+        <p>
+          I started my photography carrier as a wartime photographer on the sothern zombaistand front.
+        </p>
+
+        <p>
+         now I sell pictures of nature and take wedding photos for vary reasonable prices.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section> -->
+
+<!-- =========================
+     ABOUT SECTION
+========================== -->
+
+<section class="about" id="about">
+
+  <div class="about-container">
+
+    <!-- About Image -->
+
+    <div class="about-image">
+
+      <img
+        src="photos/alex.png"
+        alt="Alex holding a camera"
+      >
+
+    </div>
+
+    <!-- About Content -->
+
+    <div class="about-content">
+
+      <h2>About Alex</h2>
+
+      <p>
+        Alex is a black and white photographer focused on
+        capturing emotion, contrast, and timeless visual
+        storytelling through portrait and urban photography.
+      </p>
+
+      <p>
+        Through Alex's Styles, each project is crafted with
+        a cinematic approach that blends artistic composition
+        with authentic moments.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- =========================
+       PORTFOLIO
+  ========================== -->
+
+  <section id="portfolio" class="section alt-section">
+
+    <div class="section-title">
+      <h2>Portfolio</h2>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!-- PROJECT 1 -->
+
+      <div class="project-card">
+
+        <div class="project-image"></div>
+
+        <h3>photos from zombaychia</h3>
+
+        <p>
+          some of my favorites from zombaychia.
+        </p>
+
+       <button
+  class="btn open-modal"
+
+  data-title="Urban Portrait Collection"
+
+  data-description="A dramatic black and white portrait series focused on contrast, emotion, and cinematic lighting."
+
+  data-image1="photos\DASayre43_2933708.png"
+
+  data-image2="photos\DASayre43_3098621.png"
+
+  data-image3="photos\DASayre43_3199778.png"
+>
+  View Details
+</button>
+
+      </div>
+
+      <!-- PROJECT 2 -->
+
+      <div class="project-card">
+
+        <div class="project-image"></div>
+
+        <h3>wedding photos</h3>
+
+        <p>
+          the most important day of your life captured for a vary reasonable price.
+        </p>
+
+       <button
+          class="btn open-modal"
+
+          data-title="Urban Portrait Collection"
+
+          data-description="A dramatic black and white portrait series focused on contrast, emotion, and cinematic lighting."
+
+          data-image1="photos\blocky wedding photo.webp"
+
+          data-image2="photos\f3c9a57391aff2d31d1f74e775619948d46be650.png"
+
+          data-image3="photos\alex.png"
+        >
+          View Details
+        </button>
+
+      </div>
+
+      <!-- PROJECT 3 -->
+
+      <div class="project-card">
+
+        <div class="project-image"></div>
+
+        <h3>nature scenes</h3>
+
+        <p>
+          a colection of lovely nature scenes
+        </p>
+
+        <button
+  class="btn open-modal"
+
+  data-title="Urban Portrait Collection"
+
+  data-description="A dramatic black and white portrait series focused on contrast, emotion, and cinematic lighting."
+
+  data-image1="photos\d5ab26352d30f491e2909a4c90adce44b8093c72.png"
+
+  data-image2="photos\DASayre43_3098925.png"
+
+  data-image3="photos\DASayre43_105457.png"
+>
+  View Details
+</button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section id="contact" class="section">
+
+    <div class="section-title">
+      <h2>Contact</h2>
+    </div>
+
+    <div class="contact-card">
+
+      <p>
+        Interested in my work?
+      </p>
+
+      <a href="" class="btn">
+        Get In Touch
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+     MODAL
+========================== -->
+
+<div class="modal" id="projectModal">
+
+  <div class="modal-content">
+
+    <button class="close-modal">&times;</button>
+
+    <h2 id="modalTitle"></h2>
+
+    <!-- Modal Photo Gallery -->
+
+    <div class="modal-gallery">
+
+      <img
+        id="modalImage1"
+        src=""
+        alt="Project photo 1"
+      >
+
+      <img
+        id="modalImage2"
+        src=""
+        alt="Project photo 2"
+      >
+
+      <img
+        id="modalImage3"
+        src=""
+        alt="Project photo 3"
+      >
+
+    </div>
+
+    <p id="modalDescription"></p>
+
+  </div>
+
+</div>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+    <p>© 2026 MyPortfolio. All rights reserved.</p>
+  </footer>
+
+  <!-- =========================
+       SCRIPT
+  ========================== -->
+
+  <script>
+
+  // MODAL ELEMENTS
+
+  const modal =
+    document.getElementById("projectModal");
+
+  const modalTitle =
+    document.getElementById("modalTitle");
+
+  const modalDescription =
+    document.getElementById("modalDescription");
+
+  const modalImage1 =
+    document.getElementById("modalImage1");
+
+  const modalImage2 =
+    document.getElementById("modalImage2");
+
+  const modalImage3 =
+    document.getElementById("modalImage3");
+
+  const openButtons =
+    document.querySelectorAll(".open-modal");
+
+  const closeButton =
+    document.querySelector(".close-modal");
+
+
+  // OPEN MODAL
+
+  openButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      // Text Content
+
+      modalTitle.textContent =
+        button.dataset.title;
+
+      modalDescription.textContent =
+        button.dataset.description;
+
+
+      // Images
+
+      modalImage1.src =
+        button.dataset.image1;
+
+      modalImage2.src =
+        button.dataset.image2;
+
+      modalImage3.src =
+        button.dataset.image3;
+
+
+      // Show Modal
+
+      modal.classList.add("show");
+
+    });
+
+  });
+
+
+  // CLOSE MODAL
+
+  closeButton.addEventListener("click", () => {
+
+    modal.classList.remove("show");
+
+  });
+
+
+  // CLOSE ON OUTSIDE CLICK
+
+  window.addEventListener("click", (e) => {
+
+    if (e.target === modal) {
+
+      modal.classList.remove("show");
+
+    }
+
+  });
+
+</script>
+
+</body>
+</html>
