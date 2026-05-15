@@ -561,7 +561,7 @@ body {
 /* Example image assignments */
 
 .project-card:nth-child(1) .project-image {
-  background-image: url("/photos/DASayre43_3106828.png");
+  background-image: url("photos/DASayre43_3106828.png");
 }
 
 .project-card:nth-child(2) .project-image {
@@ -609,7 +609,7 @@ body {
       rgba(0,0,0,0.65),
       rgba(0,0,0,0.75)
     ),
-    url("/photos/DASayre43_3098925.png");
+    url("photos/DASayre43_3098925.png");
 
   background-size: cover;
   background-position: center;
