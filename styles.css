@@ -228,7 +228,7 @@ body {
       rgba(0,0,0,0.65),
       rgba(0,0,0,0.75)
     ),
-    url("images/hero-photo.jpg");
+    url("photos/hero-photo.jpg");
 
   background-size: cover;
   background-position: center;
